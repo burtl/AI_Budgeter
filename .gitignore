@@ -1,0 +1,26 @@
+# IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Go-related ignores
+/bin/
+/pkg/
+*.exe
+*.log
+*.out
+*.test
+
+# Go modules and vendor (if using modules)
+go.sum
+go.work
+go.work.sum
+vendor/
+
+# Build artifacts
+*.o
+*.a
+*.so
+
+# Temporary files
+.DS_Store
+*.swp
