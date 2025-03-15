@@ -6,11 +6,15 @@
 * Install and use `golang-migrate` for SQL migrations.
     ```bash 
     go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
+    ```
   
-    # SQL migrations files will be in here.
+    SQL migrations files will be in here:
+    ```sh 
     mkdir -p migrations
-  
-    # Example SQL migrations file creation.
+    ```  
+
+    Example SQL migrations file creation:
+    ```sh 
     migrate create -ext sql -dir migrations -seq create_users_table
     ```
   
@@ -27,4 +31,11 @@
 
 
 
+Note: Make sure you have docker desktop installed on your localhost. 
+```sh 
+docker compose --profile database up
+docker compose --profile demo --profile database up
 
+# To teardown everything:
+docker compose down -v
+```

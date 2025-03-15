@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: dev.user
+      POSTGRES_PASSWORD: dev.password
+      POSTGRES_DB: dev.database
+    profiles:
+      - database
+
+  migrate:
+    image: migrate/migrate
+    volumes:
+      - ./migrations:/migrations
+    command: [ "-path", "/migrations", "-database", "postgres://dev.user:dev.password@postgres:5432/dev.database?sslmode=disable", "up" ]
+    depends_on:
+      - postgres
+    profiles:
+      - database
+
+  app:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: postgres://dev.user:dev.password@postgres:5432/dev.database
+    profiles:
+      - demo
+
+# TODO migrate ?
+
+volumes:
+  pgdata:
