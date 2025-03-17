@@ -46,3 +46,9 @@ Add Gin to the project.
 ```sh 
 go get github.com/gin-gonic/gin
 ```
+
+Add bcrypt to the project.
+```sh 
+go get golang.org/x/crypto/bcrypt
+```
+
