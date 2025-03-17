@@ -1,4 +1,5 @@
 
+Note: this README is a work-in-progress. I am currently documenting snippets of commands needed to be run to setup the project, etc. Later on I will organize the content on this page.
 
 
 
