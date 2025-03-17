@@ -39,3 +39,10 @@ docker compose --profile demo --profile database up
 # To teardown everything:
 docker compose down -v
 ```
+
+
+
+Add Gin to the project.
+```sh 
+go get github.com/gin-gonic/gin
+```
