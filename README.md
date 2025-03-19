@@ -53,3 +53,8 @@ Add bcrypt to the project.
 go get golang.org/x/crypto/bcrypt
 ```
 
+Add JWT functionality.
+```sh 
+go get github.com/golang-jwt/jwt/v4
+```
+
