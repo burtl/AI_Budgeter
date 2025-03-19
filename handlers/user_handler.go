@@ -4,9 +4,9 @@ package handlers
 import (
 	"net/http"
 
+	"AI_Budgeter/services" // Adjust import path based on your project structure
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"
-	"your_project/services" // Adjust import path based on your project structure
 )
 
 // UserHandler handles user-related HTTP requests.

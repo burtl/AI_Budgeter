@@ -58,3 +58,6 @@ Add JWT functionality.
 go get github.com/golang-jwt/jwt/v4
 ```
 
+```sh 
+go get github.com/lib/pq
+```

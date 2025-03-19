@@ -2,15 +2,13 @@
 package main
 
 import (
+	"AI_Budgeter/handlers" // Adjust import path based on your project
+	"AI_Budgeter/services" // Adjust import path based on your project
 	"database/sql"
 	"fmt"
-	"log"
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq" // PostgreSQL driver
-	"your_project/handlers" // Adjust import path based on your project
-	"your_project/services" // Adjust import path based on your project
+	"log"
 )
 
 // SetupServer initializes the Gin engine and routes.

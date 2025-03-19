@@ -4,8 +4,8 @@ package handlers
 import (
 	"net/http"
 
+	"AI_Budgeter/services" // Adjust the import path based on your project structure
 	"github.com/gin-gonic/gin"
-	"your_project/services" // Adjust the import path based on your project structure
 )
 
 // LoginHandler handles authentication-related HTTP requests.
